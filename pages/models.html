@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model Library – Scenario</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav-header" id="navbar">
+  <nav class="nav-container">
+    <a href="../index.html" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#ng)"/><defs><linearGradient id="ng" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs></svg>
+      <span>Scenario</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
+      <li class="nav-item"><a href="models.html" class="nav-link active">Models</a></li>
+      <li class="nav-item"><a href="enterprise.html" class="nav-link">Enterprise</a></li>
+      <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+      <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-btn" id="cmdPaletteBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <kbd>⌘K</kbd>
+      </button>
+      <a href="login.html" class="btn btn-ghost">Sign In</a>
+      <a href="signup.html" class="btn btn-primary">Get Started</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="models-hero">
+  <div class="container">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      200+ Models Available
+    </div>
+    <h1 class="hero-title">Discover &amp; deploy <span class="gradient-text">AI models</span></h1>
+    <p class="hero-subtitle">Browse 200+ foundation models or use your custom-trained models. Filter by type, style, and task to find the perfect model for your workflow.</p>
+  </div>
+  <div class="hero-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+</section>
+
+<!-- ===== FILTER BAR ===== -->
+<section class="filter-section">
+  <div class="container">
+    <!-- Tabs -->
+    <div class="filter-tabs" role="tablist">
+      <button class="filter-tab active" role="tab" data-tab="all">All Models</button>
+      <button class="filter-tab" role="tab" data-tab="foundation">Foundation</button>
+      <button class="filter-tab" role="tab" data-tab="community">Community</button>
+      <button class="filter-tab" role="tab" data-tab="my-models">My Models</button>
+    </div>
+
+    <!-- Filters Row -->
+    <div class="filter-row">
+      <div class="filter-group">
+        <div class="select-wrapper">
+          <select class="filter-select" aria-label="Filter by type">
+            <option value="">Type</option>
+            <option>Image</option>
+            <option>Video</option>
+            <option>3D</option>
+            <option>Audio</option>
+          </select>
+          <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" aria-label="Filter by style">
+            <option value="">Style</option>
+            <option>Realistic</option>
+            <option>Anime</option>
+            <option>Pixel</option>
+            <option>Fantasy</option>
+            <option>Sci-fi</option>
+          </select>
+          <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" aria-label="Sort models">
+            <option>Popular</option>
+            <option>Newest</option>
+            <option>Trending</option>
+          </select>
+          <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+      <div class="filter-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search models..." class="search-input" aria-label="Search models"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED MODELS ===== -->
+<section class="section featured-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-eyebrow">Hand-picked</span>
+        <h2 class="section-title">Featured Models</h2>
+      </div>
+      <a href="#" class="btn btn-ghost btn-sm">View All →</a>
+    </div>
+
+    <div class="featured-grid">
+
+      <!-- Card 1: SDXL Base -->
+      <div class="model-card model-card--featured animate-on-scroll">
+        <div class="model-thumb" style="background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);">
+          <div class="model-thumb-pattern">
+            <svg viewBox="0 0 80 80" fill="none" opacity="0.3"><circle cx="40" cy="40" r="30" stroke="white" stroke-width="2"/><circle cx="40" cy="40" r="20" stroke="white" stroke-width="2"/><circle cx="40" cy="40" r="10" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <span class="model-type-badge badge-image">Image</span>
+          <button class="model-thumb-action">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="model-info">
+          <div class="model-meta-top">
+            <span class="model-creator-tag">Foundation</span>
+            <span class="model-version">v1.0</span>
+          </div>
+          <h3 class="model-name">SDXL Base</h3>
+          <p class="model-desc">State-of-the-art latent diffusion model for photorealistic and artistic image generation with exceptional prompt adherence.</p>
+          <div class="model-stats">
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              4.9
+            </span>
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              2.3M uses
+            </span>
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Fast
+            </span>
+          </div>
+          <div class="model-tags">
+            <span class="tag">Photorealistic</span>
+            <span class="tag">Artistic</span>
+            <span class="tag">SDXL</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-full">Use Model</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Flux.1-dev -->
+      <div class="model-card model-card--featured animate-on-scroll" style="animation-delay:0.1s">
+        <div class="model-thumb" style="background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%);">
+          <div class="model-thumb-pattern">
+            <svg viewBox="0 0 80 80" fill="none" opacity="0.3"><rect x="10" y="10" width="60" height="60" stroke="white" stroke-width="2"/><rect x="20" y="20" width="40" height="40" stroke="white" stroke-width="2"/><rect x="30" y="30" width="20" height="20" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <span class="model-type-badge badge-image">Image</span>
+          <button class="model-thumb-action">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="model-info">
+          <div class="model-meta-top">
+            <span class="model-creator-tag">Foundation</span>
+            <span class="model-version">dev</span>
+          </div>
+          <h3 class="model-name">Flux.1-dev</h3>
+          <p class="model-desc">Next-generation flow matching model with superior image quality, text rendering, and composition understanding.</p>
+          <div class="model-stats">
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              4.8
+            </span>
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              1.8M uses
+            </span>
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Medium
+            </span>
+          </div>
+          <div class="model-tags">
+            <span class="tag">High Quality</span>
+            <span class="tag">Text Render</span>
+            <span class="tag">Flux</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-full">Use Model</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Anime Diffusion Pro -->
+      <div class="model-card model-card--featured animate-on-scroll" style="animation-delay:0.2s">
+        <div class="model-thumb" style="background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);">
+          <div class="model-thumb-pattern">
+            <svg viewBox="0 0 80 80" fill="none" opacity="0.3"><polygon points="40,5 75,65 5,65" stroke="white" stroke-width="2"/><polygon points="40,20 65,60 15,60" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <span class="model-type-badge badge-image">Image</span>
+          <button class="model-thumb-action">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="model-info">
+          <div class="model-meta-top">
+            <span class="model-creator-tag community-tag">Community</span>
+            <span class="model-version">v3.1</span>
+          </div>
+          <h3 class="model-name">Anime Diffusion Pro</h3>
+          <p class="model-desc">Community-trained anime and manga-style image generation model with exceptional character consistency and style range.</p>
+          <div class="model-stats">
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              4.7
+            </span>
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              890K uses
+            </span>
+          </div>
+          <div class="model-tags">
+            <span class="tag">Anime</span>
+            <span class="tag">Manga</span>
+            <span class="tag">Character</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-full">Use Model</a>
+        </div>
+      </div>
+
+      <!-- Card 4: TripoSR 3D -->
+      <div class="model-card model-card--featured animate-on-scroll" style="animation-delay:0.3s">
+        <div class="model-thumb" style="background: linear-gradient(135deg, #10b981 0%, #2563eb 100%);">
+          <div class="model-thumb-pattern">
+            <svg viewBox="0 0 80 80" fill="none" opacity="0.3"><polyline points="40,8 70,25 70,55 40,72 10,55 10,25 40,8" stroke="white" stroke-width="2"/><line x1="40" y1="8" x2="40" y2="72" stroke="white" stroke-width="1"/><line x1="10" y1="25" x2="70" y2="55" stroke="white" stroke-width="1"/><line x1="70" y1="25" x2="10" y2="55" stroke="white" stroke-width="1"/></svg>
+          </div>
+          <span class="model-type-badge badge-3d">3D</span>
+          <button class="model-thumb-action">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="model-info">
+          <div class="model-meta-top">
+            <span class="model-creator-tag">Foundation</span>
+            <span class="model-version">v1.2</span>
+          </div>
+          <h3 class="model-name">TripoSR 3D</h3>
+          <p class="model-desc">Single-image to 3D mesh generation. Transform 2D images into fully textured 3D models in seconds with high-fidelity output.</p>
+          <div class="model-stats">
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              4.8
+            </span>
+            <span class="model-stat">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              650K uses
+            </span>
+          </div>
+          <div class="model-tags">
+            <span class="tag">3D Mesh</span>
+            <span class="tag">Single Image</span>
+            <span class="tag">Game Ready</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-full">Use Model</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOUNDATION MODELS ===== -->
+<section class="section" id="foundation">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-eyebrow">Core Infrastructure</span>
+        <h2 class="section-title">Foundation Models</h2>
+      </div>
+      <a href="#" class="btn btn-ghost btn-sm">View All →</a>
+    </div>
+
+    <div class="models-grid">
+
+      <div class="model-card-sm animate-on-scroll">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#7c3aed,#2563eb)">
+          <span class="badge-sm badge-image">Image</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Stability AI</span>
+          <h4 class="model-name-sm">SDXL 1.0</h4>
+          <p class="model-desc-sm">High-resolution 1024px image generation</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.9 · 2.3M uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.05s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#0ea5e9,#7c3aed)">
+          <span class="badge-sm badge-image">Image</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Black Forest Labs</span>
+          <h4 class="model-name-sm">Flux.1-dev</h4>
+          <p class="model-desc-sm">12B param flow matching model</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.8 · 1.8M uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.1s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#2563eb,#0ea5e9)">
+          <span class="badge-sm badge-image">Image</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Black Forest Labs</span>
+          <h4 class="model-name-sm">Flux.1-schnell</h4>
+          <p class="model-desc-sm">Ultra-fast 4-step generation</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.6 · 1.2M uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.15s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#a855f7,#ec4899)">
+          <span class="badge-sm badge-image">Image</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Stability AI</span>
+          <h4 class="model-name-sm">Stable Diffusion 3.5</h4>
+          <p class="model-desc-sm">Latest multimodal diffusion transformer</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.7 · 950K uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.2s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#10b981,#2563eb)">
+          <span class="badge-sm badge-3d">3D</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Stability AI × Tripo</span>
+          <h4 class="model-name-sm">TripoSR</h4>
+          <p class="model-desc-sm">Image-to-3D reconstruction in 0.5s</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.8 · 650K uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.25s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#06b6d4,#10b981)">
+          <span class="badge-sm badge-3d">3D</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Meshy</span>
+          <h4 class="model-name-sm">Meshy-4</h4>
+          <p class="model-desc-sm">Text-to-3D and image-to-3D model</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.5 · 420K uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.3s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#f59e0b,#ef4444)">
+          <span class="badge-sm badge-video">Video</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Kuaishou</span>
+          <h4 class="model-name-sm">Kling Video</h4>
+          <p class="model-desc-sm">Text & image-to-video generation</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.6 · 380K uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-card-sm animate-on-scroll" style="animation-delay:.35s">
+        <div class="model-thumb-sm" style="background: linear-gradient(135deg,#8b5cf6,#06b6d4)">
+          <span class="badge-sm badge-audio">Audio</span>
+        </div>
+        <div class="model-card-sm-info">
+          <span class="model-creator-sm">Stability AI</span>
+          <h4 class="model-name-sm">Stable Audio 2.0</h4>
+          <p class="model-desc-sm">High-quality music & SFX generation</p>
+          <div class="model-foot">
+            <span class="model-stat-sm">⭐ 4.5 · 290K uses</span>
+            <a href="#" class="btn btn-primary btn-xs">Use</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMMUNITY MODELS ===== -->
+<section class="section section-alt" id="community">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-eyebrow">Built by creators, for creators</span>
+        <h2 class="section-title">Top Community Models</h2>
+      </div>
+      <a href="#" class="btn btn-ghost btn-sm">Browse All →</a>
+    </div>
+
+    <div class="community-grid">
+
+      <div class="community-card animate-on-scroll">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#f59e0b,#ef4444)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><rect x="5" y="5" width="10" height="10" fill="white"/><rect x="20" y="5" width="10" height="10" fill="white"/><rect x="35" y="5" width="10" height="10" fill="white"/><rect x="5" y="20" width="10" height="10" fill="white"/><rect x="35" y="20" width="10" height="10" fill="white"/><rect x="5" y="35" width="10" height="10" fill="white"/><rect x="20" y="35" width="10" height="10" fill="white"/><rect x="35" y="35" width="10" height="10" fill="white"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#7c3aed,#ec4899)">P</div>
+            <span>pixel_wizard</span>
+          </div>
+          <h4 class="community-name">Pixel Art Master</h4>
+          <p class="community-desc">16-bit and 32-bit pixel art sprites and backgrounds for retro games.</p>
+          <div class="community-tags">
+            <span class="tag">Pixel Art</span><span class="tag">Retro</span><span class="tag">Sprites</span>
+          </div>
+          <div class="community-stats">⭐ 4.6 · 340K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.05s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#7c3aed,#ec4899)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><polygon points="30,5 55,45 5,45" fill="white"/><polygon points="30,18 48,42 12,42" fill="none" stroke="white" stroke-width="2"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#2563eb,#10b981)">D</div>
+            <span>dragon_forge</span>
+          </div>
+          <h4 class="community-name">Fantasy RPG Assets</h4>
+          <p class="community-desc">High-fantasy weapons, armor, characters, and environment props.</p>
+          <div class="community-tags">
+            <span class="tag">Fantasy</span><span class="tag">RPG</span><span class="tag">Assets</span>
+          </div>
+          <div class="community-stats">⭐ 4.7 · 520K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.1s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#ec4899,#f59e0b)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><circle cx="30" cy="25" r="15" fill="white"/><circle cx="20" cy="45" r="8" fill="white"/><circle cx="40" cy="45" r="8" fill="white"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#ec4899,#f59e0b)">A</div>
+            <span>animepro_studio</span>
+          </div>
+          <h4 class="community-name">Anime Character Pro</h4>
+          <p class="community-desc">Consistent anime character generation with style locking and pose control.</p>
+          <div class="community-tags">
+            <span class="tag">Anime</span><span class="tag">Character</span><span class="tag">Consistent</span>
+          </div>
+          <div class="community-stats">⭐ 4.8 · 720K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.15s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#06b6d4,#2563eb)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><circle cx="30" cy="30" r="20" stroke="white" stroke-width="2"/><line x1="10" y1="30" x2="50" y2="30" stroke="white" stroke-width="2"/><line x1="30" y1="10" x2="30" y2="50" stroke="white" stroke-width="2"/><ellipse cx="30" cy="30" rx="20" ry="10" stroke="white" stroke-width="2"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#06b6d4,#7c3aed)">S</div>
+            <span>sci_fi_collective</span>
+          </div>
+          <h4 class="community-name">Sci-Fi Environment Pack</h4>
+          <p class="community-desc">Futuristic cities, spaceships, and dystopian environments.</p>
+          <div class="community-tags">
+            <span class="tag">Sci-Fi</span><span class="tag">Environments</span>
+          </div>
+          <div class="community-stats">⭐ 4.5 · 280K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.2s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#10b981,#7c3aed)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><rect x="10" y="10" width="40" height="40" rx="5" fill="white"/><rect x="20" y="20" width="20" height="20" rx="3" fill="none" stroke="#10b981" stroke-width="3"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#10b981,#2563eb)">I</div>
+            <span>icon_masters</span>
+          </div>
+          <h4 class="community-name">Game Icon Generator</h4>
+          <p class="community-desc">Inventory items, skill icons, and UI elements for mobile games.</p>
+          <div class="community-tags">
+            <span class="tag">Icons</span><span class="tag">UI</span><span class="tag">Mobile</span>
+          </div>
+          <div class="community-stats">⭐ 4.6 · 410K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.25s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#ef4444,#f59e0b)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><path d="M30 5 L55 20 L55 50 L30 55 L5 50 L5 20 Z" fill="white"/><path d="M30 15 L45 23 L45 43 L30 47 L15 43 L15 23 Z" fill="none" stroke="orange" stroke-width="2"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#ef4444,#f59e0b)">N</div>
+            <span>nft_collective</span>
+          </div>
+          <h4 class="community-name">NFT Trait Generator</h4>
+          <p class="community-desc">Layered trait generation for PFP and gaming NFT collections.</p>
+          <div class="community-tags">
+            <span class="tag">NFT</span><span class="tag">Traits</span><span class="tag">Web3</span>
+          </div>
+          <div class="community-stats">⭐ 4.4 · 195K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.3s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#a855f7,#06b6d4)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><path d="M5 55 Q15 30 30 20 Q45 30 55 55 Z" fill="white"/><circle cx="30" cy="15" r="8" fill="white"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#a855f7,#06b6d4)">C</div>
+            <span>concept_art_labs</span>
+          </div>
+          <h4 class="community-name">Character Concept Studio</h4>
+          <p class="community-desc">Turnaround sheets and concept art for game characters in any style.</p>
+          <div class="community-tags">
+            <span class="tag">Concept Art</span><span class="tag">Character</span>
+          </div>
+          <div class="community-stats">⭐ 4.7 · 310K uses</div>
+        </div>
+      </div>
+
+      <div class="community-card animate-on-scroll" style="animation-delay:.35s">
+        <div class="community-thumb" style="background: linear-gradient(135deg,#8b5cf6,#f59e0b)">
+          <div class="community-thumb-inner">
+            <svg viewBox="0 0 60 60" fill="none" opacity="0.5"><path d="M30 8 Q50 18 50 35 Q50 52 30 52 Q10 52 10 35 Q10 18 30 8" fill="white"/></svg>
+          </div>
+        </div>
+        <div class="community-info">
+          <div class="community-creator">
+            <div class="creator-avatar" style="background: linear-gradient(135deg,#8b5cf6,#f59e0b)">T</div>
+            <span>tileset_factory</span>
+          </div>
+          <h4 class="community-name">Tileset &amp; Map Generator</h4>
+          <p class="community-desc">Seamless tilesets for top-down, platformer, and isometric games.</p>
+          <div class="community-tags">
+            <span class="tag">Tileset</span><span class="tag">Isometric</span>
+          </div>
+          <div class="community-stats">⭐ 4.5 · 265K uses</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOM MODELS ===== -->
+<section class="section" id="custom-models">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-eyebrow">Your workspace</span>
+        <h2 class="section-title">Your Custom Models</h2>
+      </div>
+    </div>
+
+    <div class="custom-models-state">
+      <div class="empty-state">
+        <div class="empty-state-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Train Your First Model</h3>
+        <p>Upload your art assets and train a custom AI model that matches your unique style. Ready in as little as 30 minutes.</p>
+        <div class="empty-state-actions">
+          <a href="#" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Train a Model
+          </a>
+          <a href="#" class="btn btn-ghost">Learn How It Works →</a>
+        </div>
+        <div class="empty-state-features">
+          <span>✓ Upload 10–200 images</span>
+          <span>✓ 30–60 min training</span>
+          <span>✓ Unlimited generation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW MODEL TRAINING WORKS ===== -->
+<section class="section section-alt training-section">
+  <div class="container">
+    <div class="section-center">
+      <span class="section-eyebrow">Simple process</span>
+      <h2 class="section-title">How Model Training Works</h2>
+      <p class="section-desc">Train a custom AI model on your art style in four simple steps. No ML expertise required.</p>
+    </div>
+
+    <div class="training-steps">
+
+      <div class="training-step animate-on-scroll">
+        <div class="step-number">01</div>
+        <div class="step-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <h4 class="step-title">Upload Assets</h4>
+        <p class="step-desc">Upload 10–200 reference images that represent your art style, characters, or theme.</p>
+      </div>
+
+      <div class="training-step-arrow" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+
+      <div class="training-step animate-on-scroll" style="animation-delay:.1s">
+        <div class="step-number">02</div>
+        <div class="step-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h4 class="step-title">Configure Training</h4>
+        <p class="step-desc">Set model name, trigger words, training strength, and target output type.</p>
+      </div>
+
+      <div class="training-step-arrow" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+
+      <div class="training-step animate-on-scroll" style="animation-delay:.2s">
+        <div class="step-number">03</div>
+        <div class="step-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4 class="step-title">AI Trains Your Model</h4>
+        <p class="step-desc">Our GPU cloud fine-tunes a foundation model on your data. Typically 30–60 minutes.</p>
+      </div>
+
+      <div class="training-step-arrow" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+
+      <div class="training-step animate-on-scroll" style="animation-delay:.3s">
+        <div class="step-number">04</div>
+        <div class="step-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        </div>
+        <h4 class="step-title">Generate &amp; Deploy</h4>
+        <p class="step-desc">Use your model via UI, API, or SDK. Publish to Community or keep it private.</p>
+      </div>
+
+    </div>
+
+    <div class="training-cta">
+      <a href="#" class="btn btn-primary btn-lg">Start Training for Free</a>
+      <a href="#" class="btn btn-ghost">See Training Documentation →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo footer-logo">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#fg)"/><defs><linearGradient id="fg" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs></svg>
+          <span>Scenario</span>
+        </a>
+        <p>The AI-powered game asset platform for studios of all sizes.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="Discord" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.013.043.031.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg></a>
+          <a href="#" aria-label="GitHub" class="social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="models.html">Model Library</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Enterprise</h5>
+        <ul>
+          <li><a href="enterprise.html#gaming">Game Studios</a></li>
+          <li><a href="enterprise.html#animation">Animation & Film</a></li>
+          <li><a href="enterprise.html#web3">Web3 & NFT</a></li>
+          <li><a href="enterprise.html#marketing">Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="resources.html#docs">Documentation</a></li>
+          <li><a href="resources.html#blog">Blog</a></li>
+          <li><a href="resources.html#tutorials">Tutorials</a></li>
+          <li><a href="resources.html#community">Community</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Scenario AI, Inc. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Command Palette -->
+<div class="cmd-palette-overlay" id="cmdOverlay" hidden>
+  <div class="cmd-palette" role="dialog" aria-label="Command palette">
+    <div class="cmd-input-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search models, features, docs..." class="cmd-input" id="cmdInput" autocomplete="off"/>
+      <kbd>ESC</kbd>
+    </div>
+    <div class="cmd-results">
+      <div class="cmd-group-label">Quick Access</div>
+      <a href="#" class="cmd-result"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg> SDXL Base Model</a>
+      <a href="#" class="cmd-result"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg> Flux.1-dev Model</a>
+      <a href="#" class="cmd-result"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg> Train New Model</a>
+    </div>
+  </div>
+</div>
+
+<script src="../js/animations.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/main.js"></script>
+<script>
+// Filter tabs
+document.querySelectorAll('.filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing & Plans – Scenario</title>
+  <meta name="description" content="Flexible, transparent pricing for solo creators and AAA game studios. Start free and scale compute units as your asset production grows." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body class="dark">
+
+  <!-- Command Palette -->
+  <div id="command-palette" class="command-palette-overlay" aria-hidden="true">
+    <div class="command-palette-modal" role="dialog" aria-label="Command palette">
+      <div class="command-palette-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="cmd-input" placeholder="Search pages, features, actions…" autocomplete="off" />
+        <kbd class="esc-hint">ESC</kbd>
+      </div>
+      <div class="command-palette-results" id="cmd-results"></div>
+      <div class="command-palette-footer">
+        <span><kbd>↑↓</kbd> Navigate</span>
+        <span><kbd>↵</kbd> Select</span>
+        <span><kbd>ESC</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="nav-header" id="navbar">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#navGrad)"/>
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#2563eb"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Scenario</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
+        <li class="nav-item"><a href="models.html" class="nav-link">Models</a></li>
+        <li class="nav-item"><a href="enterprise.html" class="nav-link">Enterprise</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link active">Pricing</a></li>
+        <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="cmdPaletteBtn" aria-label="Open command palette">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="login.html" class="btn btn-ghost">Sign In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px);">
+    <!-- Hero Section -->
+    <section class="section-header" style="margin-bottom: 40px;">
+      <div class="container">
+        <span class="section-badge">Plans & Pricing</span>
+        <h1 class="section-title">Simple, transparent pricing<br />for <span class="gradient-text">every game creator</span></h1>
+        <p class="section-subtitle">Start free with daily credits, upgrade whenever you need custom training slots, dedicated compute units, or multi-seat team workspaces.</p>
+        
+        <!-- Billing Toggle -->
+        <div class="billing-toggle" style="margin-top: 36px;">
+          <span class="toggle-label" id="monthlyLabel">Monthly</span>
+          <button class="toggle-switch" id="billingToggle" aria-label="Toggle annual billing">
+            <span class="toggle-thumb"></span>
+          </button>
+          <span class="toggle-label" id="annualLabel">Annual <span class="toggle-badge">Save 20%</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards Grid -->
+    <section class="container" style="margin-bottom: 80px;">
+      <div class="pricing-grid">
+        <!-- Free Plan -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <span class="plan-name">Free</span>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="0" data-annual="0">$0</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">Explore the platform with daily free generation credits.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 100 free compute credits / day</li>
+            <li><span class="check">✓</span> Access to 200+ foundation models</li>
+            <li><span class="check">✓</span> Community model library</li>
+            <li><span class="check">✓</span> Standard generation queue</li>
+            <li><span class="check">✓</span> 5 GB cloud storage</li>
+            <li><span class="muted-check">–</span> Custom model training</li>
+            <li><span class="muted-check">–</span> Commercial API access</li>
+          </ul>
+          <a href="signup.html" class="btn btn-outline w-full">Start Free</a>
+        </div>
+
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <span class="plan-name">Starter</span>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="15" data-annual="12">$15</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">For indie solo creators launching their first game title.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 1,500 compute credits / month</li>
+            <li><span class="check">✓</span> 1 custom model training slot</li>
+            <li><span class="check">✓</span> 50 GB cloud asset storage</li>
+            <li><span class="check">✓</span> Standard queue priority</li>
+            <li><span class="check">✓</span> Full commercial rights</li>
+            <li><span class="check">✓</span> 2D, 3D, and Audio asset export</li>
+            <li><span class="muted-check">–</span> Priority queue</li>
+          </ul>
+          <a href="signup.html?plan=starter" class="btn btn-outline w-full">Get Starter</a>
+        </div>
+
+        <!-- Pro Plan (Popular) -->
+        <div class="pricing-card pricing-popular">
+          <div class="popular-badge">Most Popular</div>
+          <div class="plan-header">
+            <span class="plan-name">Pro</span>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="45" data-annual="36">$45</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">For professional artists demanding speed and custom models.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 5,000 compute credits / month</li>
+            <li><span class="check">✓</span> Unlimited model training slots</li>
+            <li><span class="check">✓</span> 500 GB cloud asset storage</li>
+            <li><span class="check">✓</span> High-priority generation queue</li>
+            <li><span class="check">✓</span> Advanced inpainting & 16× upscaler</li>
+            <li><span class="check">✓</span> REST API access (10k requests/mo)</li>
+            <li><span class="check">✓</span> Flux context-aware editing</li>
+          </ul>
+          <a href="signup.html?plan=pro" class="btn btn-primary w-full">Start Pro Trial</a>
+        </div>
+
+        <!-- Max Plan -->
+        <div class="pricing-card">
+          <div class="plan-header">
+            <span class="plan-name">Max</span>
+            <div class="plan-price">
+              <span class="price-amount" data-monthly="75" data-annual="60">$75</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="plan-desc">For growing studios needing team collaboration and scale.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 10,000 compute credits / month</li>
+            <li><span class="check">✓</span> Multi-user workspace (5 seats included)</li>
+            <li><span class="check">✓</span> 1 TB team storage</li>
+            <li><span class="check">✓</span> Highest priority GPU compute</li>
+            <li><span class="check">✓</span> Unlimited REST API & Webhooks</li>
+            <li><span class="check">✓</span> Shared model repositories</li>
+            <li><span class="check">✓</span> Priority live chat support</li>
+          </ul>
+          <a href="signup.html?plan=max" class="btn btn-outline w-full">Get Max</a>
+        </div>
+      </div>
+
+      <!-- Enterprise Banner -->
+      <div class="genie-card" style="margin-top: 40px; padding: 48px;">
+        <div>
+          <span class="badge" style="background: rgba(37,99,235,0.2); color: var(--blue-400); border-color: rgba(37,99,235,0.4);">Enterprise</span>
+          <h2 style="font-size: 2.2rem; font-weight: 800; margin: 12px 0;">Need dedicated GPUs or custom terms?</h2>
+          <p style="color: var(--text-muted); max-width: 600px; line-height: 1.6;">Get tailored volume pricing, custom model fine-tuning with NDA protection, SOC 2 compliance, SSO/SAML, and direct Slack channel access to our machine learning engineers.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start; justify-content: center;">
+          <a href="enterprise.html" class="btn btn-primary btn-lg">Contact Enterprise Sales</a>
+          <span style="font-size: 0.85rem; color: var(--text-subtle);">From $125/user/month with annual commitments</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Feature Comparison Table -->
+    <section class="comparison-section container">
+      <div class="section-header">
+        <span class="section-badge">Matrix</span>
+        <h2 class="section-title">Compare All Features</h2>
+        <p class="section-subtitle">Deep dive into the technical capabilities and quotas across each tier.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free</th>
+              <th>Starter</th>
+              <th class="table-popular">Pro (Popular)</th>
+              <th>Max</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-category-row"><th colspan="6">Compute & Generation</th></tr>
+            <tr>
+              <td>Monthly Credits</td>
+              <td>100 / day</td>
+              <td>1,500 / mo</td>
+              <td class="table-popular">5,000 / mo</td>
+              <td>10,000 / mo</td>
+              <td>Unlimited / Custom</td>
+            </tr>
+            <tr>
+              <td>Generation Speed</td>
+              <td>Standard</td>
+              <td>Standard</td>
+              <td class="table-popular">Priority</td>
+              <td>Ultra-Fast</td>
+              <td>Dedicated GPUs</td>
+            </tr>
+            <tr>
+              <td>Concurrent Jobs</td>
+              <td>1</td>
+              <td>2</td>
+              <td class="table-popular">4</td>
+              <td>8</td>
+              <td>Custom / Unlimited</td>
+            </tr>
+            <tr>
+              <td>Max Resolution</td>
+              <td>1024×1024</td>
+              <td>2048×2048</td>
+              <td class="table-popular">4096×4096</td>
+              <td>8192×8192</td>
+              <td>16K Native</td>
+            </tr>
+
+            <tr class="table-category-row"><th colspan="6">Custom Training</th></tr>
+            <tr>
+              <td>Custom Models</td>
+              <td><span class="muted-check">–</span></td>
+              <td>1 Active Slot</td>
+              <td class="table-popular">Unlimited</td>
+              <td>Unlimited</td>
+              <td>Unlimited + Private LoRA</td>
+            </tr>
+            <tr>
+              <td>Training Dataset Size</td>
+              <td><span class="muted-check">–</span></td>
+              <td>Up to 30 images</td>
+              <td class="table-popular">Up to 150 images</td>
+              <td>Up to 500 images</td>
+              <td>Unlimited + Full Finetune</td>
+            </tr>
+            <tr>
+              <td>Data Privacy Guarantee</td>
+              <td>Standard</td>
+              <td>Private</td>
+              <td class="table-popular">Private</td>
+              <td>Zero-Retention</td>
+              <td>Air-gapped & SOC 2</td>
+            </tr>
+
+            <tr class="table-category-row"><th colspan="6">Editing & Multi-Modal</th></tr>
+            <tr>
+              <td>Inpainting / Outpainting</td>
+              <td>Basic</td>
+              <td>Full</td>
+              <td class="table-popular">Full + Layering</td>
+              <td>Full + Layering</td>
+              <td>Full + Realtime API</td>
+            </tr>
+            <tr>
+              <td>3D PBR Generation</td>
+              <td>Preview only</td>
+              <td>glTF Export</td>
+              <td class="table-popular">glTF, OBJ, FBX</td>
+              <td>Full Retopo + Rigging</td>
+              <td>Custom Shaders & Maps</td>
+            </tr>
+            <tr>
+              <td>Video & Animation</td>
+              <td>Watermarked</td>
+              <td>720p</td>
+              <td class="table-popular">1080p 60fps</td>
+              <td>4K Cinematic</td>
+              <td>Full Render Pipeline</td>
+            </tr>
+
+            <tr class="table-category-row"><th colspan="6">API & Integrations</th></tr>
+            <tr>
+              <td>REST API Access</td>
+              <td><span class="muted-check">–</span></td>
+              <td><span class="muted-check">–</span></td>
+              <td class="table-popular">10,000 req/mo</td>
+              <td>50,000 req/mo</td>
+              <td>Dedicated Endpoints</td>
+            </tr>
+            <tr>
+              <td>Unity / Unreal Engine Plugin</td>
+              <td><span class="muted-check">–</span></td>
+              <td>✓</td>
+              <td class="table-popular">✓</td>
+              <td>✓</td>
+              <td>Custom Engine SDK</td>
+            </tr>
+            <tr>
+              <td>SSO & SAML Authentication</td>
+              <td><span class="muted-check">–</span></td>
+              <td><span class="muted-check">–</span></td>
+              <td class="table-popular"><span class="muted-check">–</span></td>
+              <td>✓</td>
+              <td>Okta, Azure, Google</td>
+            </tr>
+            <tr>
+              <td>Support SLA</td>
+              <td>Community</td>
+              <td>Email (48h)</td>
+              <td class="table-popular">Priority (12h)</td>
+              <td>Dedicated (4h)</td>
+              <td>1h 24/7 SLA + Slack</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section container">
+      <div class="section-header">
+        <span class="section-badge">Frequently Asked Questions</span>
+        <h2 class="section-title">Everything you need to know</h2>
+        <p class="section-subtitle">Have questions about credits, model ownership, or commercial licensing?</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>What are compute credits and how do they work?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Compute credits are our platform currency used to run AI inferences. Generating a standard 2D image costs ~1 credit, high-definition 4K upscaling costs ~2 credits, and generating a rigged 3D model with full PBR textures costs ~10 credits. You can always purchase extra top-up credits if you run low before your monthly cycle renews.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Do unused credits roll over to the next month?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes! On all Starter, Pro, and Max annual subscription plans, your unused monthly compute credits roll over for up to 3 billing cycles as long as your account remains active.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Do I own the commercial rights to all generated game assets?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Absolutely. You own 100% of all assets generated on Scenario across any paid plan (Starter, Pro, Max, and Enterprise). You are free to ship them in commercial PC, console, mobile, or web games without paying royalties.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Is my proprietary training art kept private and secure?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes. Your uploaded artwork, art bibles, concept sketches, and trained LoRAs are isolated in your tenant workspace. We never use your proprietary data to train foundation models or share it with third parties.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Can I switch between plans or cancel at any time?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>You can upgrade, downgrade, or cancel your subscription whenever you wish directly from your workspace billing dashboard. Plan changes take effect immediately with prorated billing adjustments.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger">
+            <span>Do you offer discounts for educational institutions and students?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes! We offer a 50% educational discount on our Pro plan for verified students, educators, and indie game incubator cohorts. Reach out to education@scenario.com with your institution credentials.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta-section container">
+      <div class="final-cta-card">
+        <h2 class="final-cta-title">Start generating game assets today</h2>
+        <p class="final-cta-desc">Join thousands of creative studios accelerating their asset production pipeline. No credit card required to start.</p>
+        <div class="final-cta-actions">
+          <a href="signup.html" class="btn btn-primary btn-xl btn-glow">Get Started Free</a>
+          <a href="enterprise.html" class="btn btn-secondary btn-xl">Talk to Sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#footerGrad)"/>
+              <defs><linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            </svg>
+            <span>Scenario</span>
+          </a>
+          <p class="footer-tagline">The AI creative production platform built specifically for game developers, artists, and studios.</p>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <ul>
+              <li><a href="platform.html#image-gen">2D Generation</a></li>
+              <li><a href="platform.html#3d-gen">3D Assets</a></li>
+              <li><a href="platform.html#video-gen">Video & Anim</a></li>
+              <li><a href="platform.html#custom-models">Custom Training</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Models</h4>
+            <ul>
+              <li><a href="models.html">Foundation Models</a></li>
+              <li><a href="models.html#community">Community Models</a></li>
+              <li><a href="models.html#custom">Train Custom Model</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="enterprise.html">Enterprise</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="resources.html">Resources</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Scenario AI, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/animations.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

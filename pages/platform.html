@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform & Engine – Scenario</title>
+  <meta name="description" content="Explore the unified generative AI suite for games: 2D concept art, 3D PBR models, animations, audio, and proprietary model fine-tuning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body class="dark">
+
+  <!-- Command Palette -->
+  <div id="command-palette" class="command-palette-overlay" aria-hidden="true">
+    <div class="command-palette-modal" role="dialog" aria-label="Command palette">
+      <div class="command-palette-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="cmd-input" placeholder="Search pages, features, actions…" autocomplete="off" />
+        <kbd class="esc-hint">ESC</kbd>
+      </div>
+      <div class="command-palette-results" id="cmd-results"></div>
+      <div class="command-palette-footer">
+        <span><kbd>↑↓</kbd> Navigate</span>
+        <span><kbd>↵</kbd> Select</span>
+        <span><kbd>ESC</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="nav-header" id="navbar">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#navGrad)"/>
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#2563eb"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Scenario</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item"><a href="platform.html" class="nav-link active">Platform</a></li>
+        <li class="nav-item"><a href="models.html" class="nav-link">Models</a></li>
+        <li class="nav-item"><a href="enterprise.html" class="nav-link">Enterprise</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="cmdPaletteBtn" aria-label="Open command palette">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="login.html" class="btn btn-ghost">Sign In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px);">
+    <!-- Platform Hero -->
+    <section class="container" style="text-align: center; margin-bottom: 80px;">
+      <span class="section-badge">Platform Overview</span>
+      <h1 class="section-title">The Complete Generative Engine<br />for <span class="gradient-text">Game Development</span></h1>
+      <p class="section-subtitle">A multi-modal production pipeline giving game studios complete art direction control over characters, props, environments, audio, and interactive 3D assets.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+        <a href="signup.html" class="btn btn-primary btn-lg btn-glow">Start Creating Free</a>
+        <a href="#custom-models" class="btn btn-secondary btn-lg">Explore Model Training</a>
+      </div>
+    </section>
+
+    <!-- Sub-navigation anchor links -->
+    <section class="container" style="margin-bottom: 60px;">
+      <div class="feature-tabs" style="overflow-x: auto; max-width: 100%;">
+        <a href="#image-gen" class="feature-tab active">2D Concept & Art</a>
+        <a href="#video-gen" class="feature-tab">Video & Animation</a>
+        <a href="#3d-gen" class="feature-tab">3D Meshes & PBR</a>
+        <a href="#audio-gen" class="feature-tab">Audio & SFX</a>
+        <a href="#custom-models" class="feature-tab">Custom Training</a>
+        <a href="#genie" class="feature-tab">Scenario Genie</a>
+        <a href="#apps" class="feature-tab">AI Workflows</a>
+      </div>
+    </section>
+
+    <!-- 1. 2D Image Generation -->
+    <section id="image-gen" class="container" style="padding: 60px 0; border-bottom: 1px solid var(--border-subtle);">
+      <div class="feature-split">
+        <div>
+          <span class="badge" style="background: rgba(124,58,237,0.15); color: var(--purple-400);">Precision 2D Pipeline</span>
+          <h2 style="font-size: 2.4rem; font-weight: 800; margin: 16px 0;">Style-consistent 2D asset creation</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Unlike consumer AI generators, Scenario's 2D canvas is tuned for game art production. Create cohesive character turnarounds, UI icons, texture maps, and environment concept art that match your game's visual identity.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> <strong>Pose & Structure Guidance:</strong> ControlNet integration for depth maps, canny edges, and skeletons.</li>
+            <li><span class="check">✓</span> <strong>Style Mixing:</strong> Compose up to 4 custom models simultaneously for hybrid aesthetics.</li>
+            <li><span class="check">✓</span> <strong>Inpainting & Outpainting:</strong> Pixel-perfect canvas editing without touching the rest of your composition.</li>
+            <li><span class="check">✓</span> <strong>Batch Variations:</strong> Generate hundreds of item variations in a single click with CSV prompt feeds.</li>
+          </ul>
+        </div>
+        <div class="feature-demo-card">
+          <div class="demo-image-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="demo-img" style="background: linear-gradient(135deg, #2d1b4e, #7c3aed40);">
+              <span class="demo-img-label">Hero Warrior Turnaround</span>
+            </div>
+            <div class="demo-img" style="background: linear-gradient(135deg, #16213e, #2563eb40);">
+              <span class="demo-img-label">Cyberpunk Weapon Kit</span>
+            </div>
+            <div class="demo-img" style="background: linear-gradient(135deg, #1a2a1a, #10b98140);">
+              <span class="demo-img-label">Isometric Dungeon Tiles</span>
+            </div>
+            <div class="demo-img" style="background: linear-gradient(135deg, #3d1222, #ec489940);">
+              <span class="demo-img-label">Spell UI Icon Pack</span>
+            </div>
+          </div>
+          <div class="demo-badge">All rendered with 100% style continuity using custom LoRA weights</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Video & Animation Generation -->
+    <section id="video-gen" class="container" style="padding: 80px 0; border-bottom: 1px solid var(--border-subtle);">
+      <div class="feature-split" style="grid-template-columns: 0.9fr 1.1fr;">
+        <div class="feature-demo-card" style="padding: 24px;">
+          <div class="video-preview-mock" style="height: 280px; margin: 0; background: radial-gradient(circle, #2563eb22, #0d0d14);">
+            <div class="video-play-btn">▶</div>
+            <div class="video-timeline">
+              <div class="video-progress" style="width: 48%;"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 14px; font-size: 0.85rem; color: var(--text-muted);">
+            <span>Frame Interpolation: 60 FPS</span>
+            <span>Duration: 4.2s Loop</span>
+          </div>
+        </div>
+        <div>
+          <span class="badge" style="background: rgba(37,99,235,0.15); color: var(--blue-400);">Dynamic Animation</span>
+          <h2 style="font-size: 2.4rem; font-weight: 800; margin: 16px 0;">Breathe motion into static game assets</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Turn static concept art and 2D sprites into full-motion cinematic cutscenes, idle animation loops, character walks, and environment ambient VFX.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> <strong>Image-to-Video:</strong> Animate your approved 2D illustrations with camera pan, zoom, and dynamic motion.</li>
+            <li><span class="check">✓</span> <strong>Motion Trajectory Control:</strong> Draw directional vectors to guide character attacks and spell casting.</li>
+            <li><span class="check">✓</span> <strong>Seamless Video Loops:</strong> Ideal for live wallpaper backgrounds and idle UI hero screens.</li>
+            <li><span class="check">✓</span> <strong>High Framerate Upscaling:</strong> Render up to 4K resolution at 60 FPS without ghosting.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 3D Meshes & PBR -->
+    <section id="3d-gen" class="container" style="padding: 80px 0; border-bottom: 1px solid var(--border-subtle);">
+      <div class="feature-split">
+        <div>
+          <span class="badge" style="background: rgba(16,185,129,0.15); color: var(--success);">Game Engine Ready</span>
+          <h2 style="font-size: 2.4rem; font-weight: 800; margin: 16px 0;">3D Models with Albedo, Roughness & Normals</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Generate clean poly meshes directly from text prompts or single reference images. Complete with multi-channel PBR texture maps and automatic quad retopology ready to drop into Unreal Engine 5 or Unity.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> <strong>Complete PBR Maps:</strong> Includes Albedo/BaseColor, Normal (OpenGL & DirectX), Roughness, and Metallic.</li>
+            <li><span class="check">✓</span> <strong>Clean Topology:</strong> Automatic decimation and quad-mesh conversion with optimized polycounts.</li>
+            <li><span class="check">✓</span> <strong>Seamless Textures:</strong> Generate tileable floor, wall, and foliage materials.</li>
+            <li><span class="check">✓</span> <strong>Standard Exports:</strong> Download clean glTF, GLB, OBJ, and FBX files.</li>
+          </ul>
+        </div>
+        <div class="feature-demo-card" style="padding: 30px; text-align: center;">
+          <div class="threed-wireframe" style="margin: 30px auto; width: 140px; height: 140px;"></div>
+          <div style="display: flex; gap: 8px; justify-content: center; margin-top: 24px;">
+            <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text-primary); border-color: var(--border-base);">glTF 2.0</span>
+            <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text-primary); border-color: var(--border-base);">FBX</span>
+            <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text-primary); border-color: var(--border-base);">OBJ</span>
+            <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--text-primary); border-color: var(--border-base);">4K PBR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Audio & SFX Generation -->
+    <section id="audio-gen" class="container" style="padding: 80px 0; border-bottom: 1px solid var(--border-subtle);">
+      <div class="feature-split" style="grid-template-columns: 0.9fr 1.1fr;">
+        <div class="feature-demo-card" style="padding: 36px;">
+          <div class="audio-waveform" style="padding: 30px 10px;">
+            <div class="wave-bars">
+              <div class="bar" style="height: 25px"></div><div class="bar" style="height: 45px"></div>
+              <div class="bar" style="height: 70px"></div><div class="bar" style="height: 50px"></div>
+              <div class="bar" style="height: 80px"></div><div class="bar" style="height: 60px"></div>
+              <div class="bar" style="height: 95px"></div><div class="bar" style="height: 75px"></div>
+              <div class="bar" style="height: 60px"></div><div class="bar" style="height: 40px"></div>
+              <div class="bar" style="height: 70px"></div><div class="bar" style="height: 35px"></div>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 18px; font-size: 0.88rem; color: var(--purple-400); font-weight: 600;">"Mystic ancient temple ambient rumble + wind howl"</p>
+        </div>
+        <div>
+          <span class="badge" style="background: rgba(245,158,11,0.15); color: var(--warning);">Immersive Soundscapes</span>
+          <h2 style="font-size: 2.4rem; font-weight: 800; margin: 16px 0;">Foley, SFX and music from simple descriptions</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Eliminate expensive stock library subscriptions. Produce royalty-free laser blasts, footstep loops on gravel, spell chants, and adaptive background exploration music in lossless WAV.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> <strong>Sound Effects Generator:</strong> Create sword impacts, mechanical gears, interface blips, and monster growls.</li>
+            <li><span class="check">✓</span> <strong>Atmospheric Ambience:</strong> Infinite seamless environmental loops for caves, space stations, and dungeons.</li>
+            <li><span class="check">✓</span> <strong>WAV & OGG Audio Export:</strong> Ready to drag into FMOD, Wwise, or directly into game engines.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Custom Model Training -->
+    <section id="custom-models" class="container" style="padding: 80px 0; border-bottom: 1px solid var(--border-subtle);">
+      <div class="section-header">
+        <span class="section-badge">The Core Breakthrough</span>
+        <h2 class="section-title">Train Custom AI on Your Own Art Bible</h2>
+        <p class="section-subtitle">Never suffer from the generic "AI look". Upload 10 to 50 pieces of your concept art, and get a private model tuned exclusively to your studio's signature aesthetic.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px;">
+        <div class="app-card" style="text-align: center;">
+          <div class="badge-num" style="font-size: 1.8rem; margin-bottom: 12px; display: block;">1</div>
+          <h3 style="font-size: 1.1rem;">Upload Art Bible</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Drop in 10-30 character sketches, environment paints, or prop illustrations.</p>
+        </div>
+        <div class="app-card" style="text-align: center;">
+          <div class="badge-num" style="font-size: 1.8rem; margin-bottom: 12px; display: block;">2</div>
+          <h3 style="font-size: 1.1rem;">Automated Captioning</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Our vision models tag styles, lighting, anatomy, and costume tags automatically.</p>
+        </div>
+        <div class="app-card" style="text-align: center;">
+          <div class="badge-num" style="font-size: 1.8rem; margin-bottom: 12px; display: block;">3</div>
+          <h3 style="font-size: 1.1rem;">LoRA Fine-Tuning</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Dedicated cloud GPUs train your high-rank LoRA in under 15 minutes.</p>
+        </div>
+        <div class="app-card" style="text-align: center;">
+          <div class="badge-num" style="font-size: 1.8rem; margin-bottom: 12px; display: block;">4</div>
+          <h3 style="font-size: 1.1rem;">Generate at Scale</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Produce thousands of brand-aligned assets across your whole production team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Scenario Genie AI Assistant -->
+    <section id="genie" class="container" style="padding: 80px 0; border-bottom: 1px solid var(--border-subtle);">
+      <div class="genie-card">
+        <div class="genie-content">
+          <div class="genie-badge"><span>🧞</span> Autonomous Creative Co-pilot</div>
+          <h2 class="genie-title">Meet Scenario Genie</h2>
+          <p class="genie-desc">Genie is an intelligent conversational agent that lives inside your workspace. Instead of manually tweaking 20 slider parameters, describe what you need in plain English.</p>
+          <ul class="genie-features">
+            <li>✨ "Generate 16 variations of this cyber helmet with glowing runes"</li>
+            <li>🔍 "Find the best community model for low-poly fantasy weapons"</li>
+            <li>⚡ "Upscale this selected batch to 4K and strip backgrounds"</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary btn-lg">Experience Genie Live</a>
+        </div>
+        <div class="genie-visual">
+          <div class="genie-chat-mock">
+            <div class="chat-msg user">Genie, take my hero paladin and create 4 elemental armor variations: Fire, Ice, Thunder, and Void.</div>
+            <div class="chat-msg genie">Analyzing your custom model "Aethelgard RPG v4"... Extracting base silhouette and rendering 4 elemental material overrides:</div>
+            <div class="chat-imgs">
+              <div class="chat-img-thumb" style="background: linear-gradient(135deg, #ef4444, #7f1d1d);"></div>
+              <div class="chat-img-thumb" style="background: linear-gradient(135deg, #38bdf8, #0369a1);"></div>
+              <div class="chat-img-thumb" style="background: linear-gradient(135deg, #facc15, #854d0e);"></div>
+              <div class="chat-img-thumb" style="background: linear-gradient(135deg, #a855f7, #581c87);"></div>
+            </div>
+            <div class="chat-msg genie">All 4 variations generated! Would you like me to export these to glTF 3D meshes or create walk-cycle sprite sheets?</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 12 One-Click AI Apps -->
+    <section id="apps" class="container" style="padding: 80px 0;">
+      <div class="section-header">
+        <span class="section-badge">Pre-built Workflows</span>
+        <h2 class="section-title">12 Instant AI Apps for Common Pipelines</h2>
+        <p class="section-subtitle">Single-click workflows engineered for specific game development bottlenecks.</p>
+      </div>
+
+      <div class="apps-grid">
+        <div class="app-card">
+          <div class="app-icon">👤</div>
+          <h3>Character Turnaround</h3>
+          <p>Generate front, side, and 3/4 views of any character concept with unified anatomy and scale.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🎞️</div>
+          <h3>Sprite Sheet Generator</h3>
+          <p>Export ready-to-use 2D sprite grids for 8-directional walks, idle, and melee attacks.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🌲</div>
+          <h3>Environment Matte</h3>
+          <p>Compose widescreen panorama matte paintings and atmospheric lighting reference boards.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🗡️</div>
+          <h3>Loot & Weapon Grids</h3>
+          <p>Generate hundreds of color-coded tiered RPG weapons (Common, Rare, Legendary) in batch.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🧱</div>
+          <h3>Seamless PBR Textures</h3>
+          <p>Generate tileable cobblestone, brick, wood, and sci-fi metal plates with normal maps.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🌐</div>
+          <h3>360° HDRI Skyboxes</h3>
+          <p>Create equirectangular skybox panoramas for day, sunset, and starry night game worlds.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">✨</div>
+          <h3>VFX Particle Sheets</h3>
+          <p>Produce fireballs, electricity arcs, dust bursts, and portal effects on transparent alpha.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🎴</div>
+          <h3>Trading Card Art</h3>
+          <p>Framed portrait assets formatted specifically for CCG / TCG digital and tabletop card games.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">📦</div>
+          <h3>Isometric Asset Pack</h3>
+          <p>Pixel-aligned isometric props, buildings, and vehicles for strategy and simulation titles.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">💎</div>
+          <h3>Game UI & Button Kits</h3>
+          <p>Headers, dialogue boxes, health meters, and action buttons rendered in your game theme.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🎭</div>
+          <h3>NPC Portrait Variations</h3>
+          <p>Feed a single NPC base and generate 20 facial expressions for dialogue trees.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🚀</div>
+          <h3>Marketing & Capsule Art</h3>
+          <p>High-converting Steam store capsule art, hero banners, and social announcement graphics.</p>
+          <a href="signup.html" class="app-link">Launch Workflow →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta-section container">
+      <div class="final-cta-card">
+        <h2 class="final-cta-title">Build your game faster with Scenario</h2>
+        <p class="final-cta-desc">Start on our free tier with zero setup. Discover what AI can do when built specifically for game production.</p>
+        <div class="final-cta-actions">
+          <a href="signup.html" class="btn btn-primary btn-xl btn-glow">Get Started Free</a>
+          <a href="pricing.html" class="btn btn-secondary btn-xl">Compare All Plans</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#footerGrad)"/>
+              <defs><linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            </svg>
+            <span>Scenario</span>
+          </a>
+          <p class="footer-tagline">The AI creative production platform built specifically for game developers, artists, and studios.</p>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <ul>
+              <li><a href="#image-gen">2D Pipeline</a></li>
+              <li><a href="#video-gen">Video & Anim</a></li>
+              <li><a href="#3d-gen">3D PBR Meshes</a></li>
+              <li><a href="#custom-models">Custom Training</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Models</h4>
+            <ul>
+              <li><a href="models.html">Foundation Models</a></li>
+              <li><a href="models.html#community">Community Models</a></li>
+              <li><a href="models.html#custom">Train Custom Model</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="enterprise.html">Game Studios</a></li>
+              <li><a href="enterprise.html">Animation & VFX</a></li>
+              <li><a href="enterprise.html">Web3 & NFT</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="login.html">Sign In</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Scenario AI, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/animations.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

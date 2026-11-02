@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Solutions – Scenario</title>
+  <meta name="description" content="AI creative production infrastructure for global game studios, publishers, and media enterprises. Dedicated GPUs, SOC 2 compliance, and custom pipeline integrations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body class="dark">
+
+  <!-- Command Palette -->
+  <div id="command-palette" class="command-palette-overlay" aria-hidden="true">
+    <div class="command-palette-modal" role="dialog" aria-label="Command palette">
+      <div class="command-palette-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="cmd-input" placeholder="Search pages, features, actions…" autocomplete="off" />
+        <kbd class="esc-hint">ESC</kbd>
+      </div>
+      <div class="command-palette-results" id="cmd-results"></div>
+      <div class="command-palette-footer">
+        <span><kbd>↑↓</kbd> Navigate</span>
+        <span><kbd>↵</kbd> Select</span>
+        <span><kbd>ESC</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="nav-header" id="navbar">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#navGrad)"/>
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#2563eb"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Scenario</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
+        <li class="nav-item"><a href="models.html" class="nav-link">Models</a></li>
+        <li class="nav-item"><a href="enterprise.html" class="nav-link active">Enterprise</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="cmdPaletteBtn" aria-label="Open command palette">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="login.html" class="btn btn-ghost">Sign In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px);">
+    <!-- Enterprise Hero -->
+    <section class="container" style="text-align: center; margin-bottom: 80px;">
+      <span class="section-badge" style="background: rgba(37,99,235,0.15); color: var(--blue-400); border-color: rgba(37,99,235,0.3);">Enterprise Platform</span>
+      <h1 class="section-title">Generative AI Production Infrastructure<br />at <span class="gradient-text">Enterprise Scale</span></h1>
+      <p class="section-subtitle">Empower your distributed art teams, technical directors, and external contractors with strict security, dedicated GPU clusters, and custom pipeline integrations.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; margin-top: 36px;">
+        <a href="#contact" class="btn btn-primary btn-lg btn-glow">Schedule Executive Demo</a>
+        <a href="pricing.html" class="btn btn-secondary btn-lg">Explore Pricing Matrix</a>
+      </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="container" style="margin-bottom: 90px;">
+      <div class="section-header">
+        <span class="section-badge">Tailored Solutions</span>
+        <h2 class="section-title">Engineered for Your Creative Domain</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <!-- Gaming -->
+        <div id="gaming" class="app-card" style="padding: 36px;">
+          <div class="app-icon">🎮</div>
+          <h3 style="font-size: 1.25rem;">AAA & Mid-Core Game Studios</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">Accelerate pre-production concepting and live-ops content drops. Direct integration into Perforce, GitHub, Unreal Engine 5, and Unity pipelines with automated CI/CD asset hooks.</p>
+          <ul class="feature-list" style="margin-bottom: 20px;">
+            <li><span class="check">✓</span> Unity & Unreal native C# plugins</li>
+            <li><span class="check">✓</span> Multi-user asset library governance</li>
+            <li><span class="check">✓</span> 100% intellectual property ownership</li>
+          </ul>
+        </div>
+
+        <!-- Animation & Film -->
+        <div id="animation" class="app-card" style="padding: 36px;">
+          <div class="app-icon">🎬</div>
+          <h3 style="font-size: 1.25rem;">Animation & Cinematic VFX</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">Rapid pre-visualization, background matte painting, and style-locked storyboard frames. Cut pre-vis cycles from months to days while maintaining strict directorial consistency.</p>
+          <ul class="feature-list" style="margin-bottom: 20px;">
+            <li><span class="check">✓</span> 4K high-res storyboard generation</li>
+            <li><span class="check">✓</span> Character sheets across dramatic camera angles</li>
+            <li><span class="check">✓</span> Custom aesthetic weights per project</li>
+          </ul>
+        </div>
+
+        <!-- Web3 & Digital Collections -->
+        <div id="web3" class="app-card" style="padding: 36px;">
+          <div class="app-icon">🔷</div>
+          <h3 style="font-size: 1.25rem;">Web3 & Generative Collections</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px;">Create massive high-fidelity 10,000+ asset collections with granular trait rarity weighting, zero attribute clipping, and automatic JSON metadata generation.</p>
+          <ul class="feature-list" style="margin-bottom: 20px;">
+            <li><span class="check">✓</span> Batch rarity and layering engine</li>
+            <li><span class="check">✓</span> Automated SVG/PNG trait clipping</li>
+            <li><span class="check">✓</span> IPFS-ready metadata exporter</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enterprise Security & Guarantees -->
+    <section class="container" style="margin-bottom: 90px; padding: 60px; background: var(--bg-card); border: 1px solid var(--border-base); border-radius: var(--radius-2xl);">
+      <div class="section-header" style="margin-bottom: 40px;">
+        <span class="section-badge" style="background: rgba(34,197,94,0.15); color: var(--success); border-color: rgba(34,197,94,0.3);">Security & Compliance</span>
+        <h2 class="section-title">Enterprise Security First</h2>
+        <p class="section-subtitle">Your studio's intellectual property and unreleased art bibles are safeguarded by bank-grade security protocols.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;">
+        <div style="padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 12px;">🛡️</div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 8px;">SOC 2 Type II Certified</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Independently audited controls for data security, availability, and confidential handling.</p>
+        </div>
+        <div style="padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 12px;">🔒</div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 8px;">Zero Data Retention</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Your uploaded artwork is never used to train foundation models or accessible to other clients.</p>
+        </div>
+        <div style="padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 12px;">🔑</div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 8px;">SSO / SAML / SCIM</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Seamless user lifecycle provisioning with Okta, Azure Active Directory, Google Workspace, and Ping.</p>
+        </div>
+        <div style="padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 12px;">⚡</div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 8px;">99.99% Uptime SLA</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Dedicated multi-region GPU clusters guaranteed with 1-hour priority engineer response times.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Sales Form Section -->
+    <section id="contact" class="container" style="margin-bottom: 100px;">
+      <div class="genie-card" style="padding: 50px;">
+        <div>
+          <span class="section-badge">Direct Access</span>
+          <h2 style="font-size: 2.4rem; font-weight: 800; margin: 16px 0;">Talk to our AI Solutions Architects</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 30px;">Discuss custom GPU capacity, on-premises deployment, private fine-tuning contracts, or bespoke engine plugins with our team.</p>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="check">✓</span>
+              <span>Custom pricing for teams larger than 10 creators</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="check">✓</span>
+              <span>Bespoke model fine-tuning with NDA protection</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="check">✓</span>
+              <span>Dedicated Slack/Teams channel with machine learning engineers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Form -->
+        <div style="background: var(--bg-card); padding: 36px; border: 1px solid var(--border-base); border-radius: var(--radius-xl);">
+          <form id="enterpriseForm" onsubmit="event.preventDefault(); window.Toast?.success('Thanks! An Enterprise Architect will contact you within 2 hours.'); this.reset();">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-input" required placeholder="Alex Vance" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Work Email</label>
+              <input type="email" class="form-input" required placeholder="alex@gamestudio.com" />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label class="form-label">Company / Studio</label>
+                <input type="text" class="form-input" required placeholder="Vanguard Interactive" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Team Size</label>
+                <select class="form-input" style="background: var(--bg-input);">
+                  <option>10 - 50 creators</option>
+                  <option>50 - 200 creators</option>
+                  <option>200+ creators</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Primary Goal / Use Case</label>
+              <textarea class="form-input" rows="3" placeholder="Tell us about the title or production pipeline you are accelerating..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full btn-lg">Submit Request →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#footerGrad)"/>
+              <defs><linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            </svg>
+            <span>Scenario</span>
+          </a>
+          <p class="footer-tagline">The AI creative production platform built specifically for game developers, artists, and studios.</p>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#gaming">Game Development</a></li>
+              <li><a href="#animation">Animation & Film</a></li>
+              <li><a href="#web3">Web3 & NFT</a></li>
+              <li><a href="#contact">Enterprise Sales</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <ul>
+              <li><a href="platform.html">2D & 3D Tools</a></li>
+              <li><a href="models.html">Model Library</a></li>
+              <li><a href="pricing.html">Pricing Matrix</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="resources.html">Blog & Updates</a></li>
+              <li><a href="resources.html#docs">API Reference</a></li>
+              <li><a href="resources.html#changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Security & SOC 2</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Master Services Agreement</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Scenario AI, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Security</a>
+          <a href="#">Privacy</a>
+          <a href="#">Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/animations.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

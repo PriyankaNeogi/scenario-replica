@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources, Docs & Community – Scenario</title>
+  <meta name="description" content="Tutorials, API documentation, changelog, and community showcase for game developers building with Scenario AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body class="dark">
+
+  <!-- Command Palette -->
+  <div id="command-palette" class="command-palette-overlay" aria-hidden="true">
+    <div class="command-palette-modal" role="dialog" aria-label="Command palette">
+      <div class="command-palette-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="cmd-input" placeholder="Search resources, API endpoints, tutorials…" autocomplete="off" />
+        <kbd class="esc-hint">ESC</kbd>
+      </div>
+      <div class="command-palette-results" id="cmd-results"></div>
+      <div class="command-palette-footer">
+        <span><kbd>↑↓</kbd> Navigate</span>
+        <span><kbd>↵</kbd> Select</span>
+        <span><kbd>ESC</kbd> Close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="nav-header" id="navbar">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#navGrad)"/>
+          <defs>
+            <linearGradient id="navGrad" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#2563eb"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Scenario</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
+        <li class="nav-item"><a href="models.html" class="nav-link">Models</a></li>
+        <li class="nav-item"><a href="enterprise.html" class="nav-link">Enterprise</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="resources.html" class="nav-link active">Resources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-search-btn" id="cmdPaletteBtn" aria-label="Open command palette">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <kbd>⌘K</kbd>
+        </button>
+        <a href="login.html" class="btn btn-ghost">Sign In</a>
+        <a href="signup.html" class="btn btn-primary">Get Started</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main style="padding-top: calc(var(--nav-height) + 40px);">
+    <!-- Hero -->
+    <section class="container" style="text-align: center; margin-bottom: 60px;">
+      <span class="section-badge">Knowledge Hub</span>
+      <h1 class="section-title">Guides, Documentation & <span class="gradient-text">Creator Community</span></h1>
+      <p class="section-subtitle">Deep dive into technical docs, API endpoints, tutorials, and game development case studies.</p>
+    </section>
+
+    <!-- Sub Navigation Tabs -->
+    <section class="container" style="margin-bottom: 60px;">
+      <div class="feature-tabs" style="max-width: 100%; overflow-x: auto;">
+        <a href="#blog" class="feature-tab active">Blog & Insights</a>
+        <a href="#docs" class="feature-tab">API & Documentation</a>
+        <a href="#community" class="feature-tab">Discord Community</a>
+        <a href="#changelog" class="feature-tab">Changelog</a>
+        <a href="#tutorials" class="feature-tab">Video Tutorials</a>
+      </div>
+    </section>
+
+    <!-- 1. Featured Blog & Articles -->
+    <section id="blog" class="container" style="margin-bottom: 90px;">
+      <!-- Featured Post -->
+      <div class="genie-card" style="padding: 40px; margin-bottom: 40px; grid-template-columns: 1fr 1fr;">
+        <div>
+          <span class="badge" style="background: rgba(124,58,237,0.2); color: var(--purple-400);">Featured Release</span>
+          <span style="font-size: 0.82rem; color: var(--text-subtle); margin-left: 10px;">November 2025 · 6 min read</span>
+          <h2 style="font-size: 2.2rem; font-weight: 800; margin: 16px 0;">Introducing Context-Aware Editing with Flux Engine</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Discover how our latest fine-tuning integration enables artists to edit local character apparel, weapon glow, and environment lighting with natural language without losing original line-art anatomy.</p>
+          <a href="#" class="btn btn-primary">Read Full Article →</a>
+        </div>
+        <div style="background: radial-gradient(circle at center, #7c3aed66, #09090b); border-radius: var(--radius-xl); min-height: 260px; display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center; padding: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 8px;">⚡</div>
+            <div style="font-weight: 800; font-size: 1.2rem;">Flux + Scenario Custom LoRA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div class="app-card" style="padding: 24px;">
+          <span class="badge" style="background: rgba(37,99,235,0.15); color: var(--blue-400); margin-bottom: 12px;">Tutorial</span>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Train a Studio-Ready LoRA in 15 Minutes</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Curating the ideal 20-image dataset, selecting trigger tokens, and avoiding prompt bleeding.</p>
+          <span style="font-size: 0.82rem; color: var(--purple-400); font-weight: 600;">Read Guide →</span>
+        </div>
+
+        <div class="app-card" style="padding: 24px;">
+          <span class="badge" style="background: rgba(16,185,129,0.15); color: var(--success); margin-bottom: 12px;">Case Study</span>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">How Hollow Forge Built 400 RPG Icons</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">How an indie team of 3 generated and shipped all consumable inventory art in two weeks.</p>
+          <span style="font-size: 0.82rem; color: var(--purple-400); font-weight: 600;">Read Case Study →</span>
+        </div>
+
+        <div class="app-card" style="padding: 24px;">
+          <span class="badge" style="background: rgba(245,158,11,0.15); color: var(--warning); margin-bottom: 12px;">Engineering</span>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;">Automating Game Asset Imports with Unity SDK</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">Hooking Scenario REST endpoints to automatically write Texture2D and glTF meshes to Assets/.</p>
+          <span style="font-size: 0.82rem; color: var(--purple-400); font-weight: 600;">Read Technical Doc →</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Documentation & API Reference -->
+    <section id="docs" class="container" style="margin-bottom: 90px; padding: 60px 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="api-split">
+        <div>
+          <span class="section-badge">Developer Docs</span>
+          <h2 style="font-size: 2.2rem; font-weight: 800; margin: 16px 0;">Build Custom In-Game Pipelines</h2>
+          <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">Generate assets at runtime or integrate directly into internal level editors using our low-latency REST API, WebSocket streams, and official Python / Node.js packages.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> <strong>Webhook Delivery:</strong> Asynchronous callback notifications when 4K batch renders finish.</li>
+            <li><span class="check">✓</span> <strong>Model Context Protocol (MCP):</strong> Integrate with Claude Desktop or cursor agents.</li>
+            <li><span class="check">✓</span> <strong>Fine-Tuning API:</strong> Programmatically upload image datasets and trigger training jobs.</li>
+          </ul>
+        </div>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-lang-badge">POST /v1/generate</span>
+            <button class="copy-btn" onclick="copyCode(this)">Copy Endpoint</button>
+          </div>
+          <pre class="code-pre"><code><span class="code-comment">// Generate 3D Mesh with PBR Texture Maps</span>
+<span class="code-keyword">const</span> response = <span class="code-keyword">await</span> fetch(<span class="code-string">"https://api.scenario.com/v1/generate/3d"</span>, {
+  method: <span class="code-string">"POST"</span>,
+  headers: {
+    <span class="code-string">"Authorization"</span>: <span class="code-string">"Bearer sc_live_apiKey"</span>,
+    <span class="code-string">"Content-Type"</span>: <span class="code-string">"application/json"</span>
+  },
+  body: JSON.stringify({
+    modelId: <span class="code-string">"mod_fantasy_assets_v2"</span>,
+    prompt: <span class="code-string">"Dragon scale war shield, engraved runes, gold trim"</span>,
+    format: <span class="code-string">"gltf"</span>,
+    polycount: <span class="code-number">12000</span>,
+    maps: [<span class="code-string">"albedo"</span>, <span class="code-string">"normal"</span>, <span class="code-string">"roughness"</span>, <span class="code-string">"metallic"</span>]
+  })
+});
+
+<span class="code-keyword">const</span> data = <span class="code-keyword">await</span> response.json();
+console.log(<span class="code-string">"Model URL:"</span>, data.assetUrl);</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Discord & Community -->
+    <section id="community" class="container" style="margin-bottom: 90px;">
+      <div class="genie-card" style="padding: 50px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <span class="section-badge" style="background: rgba(99,102,241,0.2); color: #818cf8; border-color: rgba(99,102,241,0.4);">50,000+ Creators</span>
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin: 16px 0;">Join the Official Scenario Discord</h2>
+        <p style="color: var(--text-muted); max-width: 600px; line-height: 1.7; margin-bottom: 30px;">Share your custom model training checkpoints, enter bi-weekly asset game jams, discover community prompts, and get real-time assistance from the core team.</p>
+        <div style="display: flex; gap: 16px;">
+          <a href="#" class="btn btn-primary btn-lg btn-glow">Join Discord Server</a>
+          <a href="models.html#community" class="btn btn-secondary btn-lg">Explore Community Models</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Changelog Timeline -->
+    <section id="changelog" class="container" style="margin-bottom: 90px;">
+      <div class="section-header">
+        <span class="section-badge">Platform Evolution</span>
+        <h2 class="section-title">Changelog & Updates</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
+        <div style="border-left: 2px solid var(--purple-600); padding-left: 24px; position: relative;">
+          <div style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--purple-600); border: 3px solid var(--bg-base);"></div>
+          <span style="font-size: 0.85rem; color: var(--purple-400); font-weight: 700;">November 2025 · v4.2.0</span>
+          <h3 style="font-size: 1.3rem; margin: 6px 0;">Flux Model Context Editing & Layered Inpainting</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Added native support for Flux context fine-tuning, canvas layer stacking, and high-precision brush feathering.</p>
+        </div>
+
+        <div style="border-left: 2px solid var(--border-base); padding-left: 24px; position: relative;">
+          <div style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--border-strong); border: 3px solid var(--bg-base);"></div>
+          <span style="font-size: 0.85rem; color: var(--text-subtle); font-weight: 700;">October 2025 · v4.1.0</span>
+          <h3 style="font-size: 1.3rem; margin: 6px 0;">Scenario Genie AI Co-Pilot Launch</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Launched conversational workflow execution allowing users to chain prompt generation, background removal, and 3D mesh building in a single dialog.</p>
+        </div>
+
+        <div style="border-left: 2px solid var(--border-base); padding-left: 24px; position: relative;">
+          <div style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--border-strong); border: 3px solid var(--bg-base);"></div>
+          <span style="font-size: 0.85rem; color: var(--text-subtle); font-weight: 700;">September 2025 · v4.0.0</span>
+          <h3 style="font-size: 1.3rem; margin: 6px 0;">Multi-Channel PBR 3D Generation & FBX Export</h3>
+          <p style="color: var(--text-muted); line-height: 1.6;">Complete overhaul of our text-to-3D pipeline with quad retopology and multi-format download capabilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Video Tutorials -->
+    <section id="tutorials" class="container" style="margin-bottom: 100px;">
+      <div class="section-header">
+        <span class="section-badge">Mastery</span>
+        <h2 class="section-title">Video Walkthroughs</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div class="app-card" style="padding: 20px;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #1e1b4b, #311042); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <div class="video-play-btn" style="width: 48px; height: 48px; font-size: 1.1rem;">▶</div>
+          </div>
+          <span style="font-size: 0.78rem; color: var(--purple-400); font-weight: 700;">BEGINNER · 8 MIN</span>
+          <h4 style="font-size: 1.05rem; margin: 6px 0;">Training Your First Game Model</h4>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">Step-by-step walkthrough from image curation to first asset render.</p>
+        </div>
+
+        <div class="app-card" style="padding: 20px;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #064e3b, #0f172a); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <div class="video-play-btn" style="width: 48px; height: 48px; font-size: 1.1rem;">▶</div>
+          </div>
+          <span style="font-size: 0.78rem; color: var(--success); font-weight: 700;">INTERMEDIATE · 14 MIN</span>
+          <h4 style="font-size: 1.05rem; margin: 6px 0;">Generating Rigged 3D Props for Unreal Engine</h4>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">Importing generated FBX meshes with normal and roughness maps into UE5.</p>
+        </div>
+
+        <div class="app-card" style="padding: 20px;">
+          <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #7c2d12, #18181b); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 14px;">
+            <div class="video-play-btn" style="width: 48px; height: 48px; font-size: 1.1rem;">▶</div>
+          </div>
+          <span style="font-size: 0.78rem; color: var(--warning); font-weight: 700;">ADVANCED · 22 MIN</span>
+          <h4 style="font-size: 1.05rem; margin: 6px 0;">LoRA Composition & Style Merging</h4>
+          <p style="font-size: 0.84rem; color: var(--text-muted);">Blended weight tuning across character anatomy and environment lighting.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4L36 13V27L20 36L4 27V13L20 4Z" fill="url(#footerGrad)"/>
+              <defs><linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+            </svg>
+            <span>Scenario</span>
+          </a>
+          <p class="footer-tagline">The AI creative production platform built specifically for game developers, artists, and studios.</p>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#docs">API Documentation</a></li>
+              <li><a href="#community">Discord</a></li>
+              <li><a href="#changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <ul>
+              <li><a href="platform.html">Features</a></li>
+              <li><a href="models.html">Model Library</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Enterprise</h4>
+            <ul>
+              <li><a href="enterprise.html">Solutions</a></li>
+              <li><a href="enterprise.html#contact">Contact Sales</a></li>
+              <li><a href="enterprise.html#gaming">Gaming</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Scenario AI, Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Security</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/animations.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

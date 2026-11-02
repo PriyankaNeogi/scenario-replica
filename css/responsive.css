@@ -1,0 +1,186 @@
+/* =============================================================
+   SCENARIO REPLICA — COMPREHENSIVE RESPONSIVE STYLES
+   Breakpoints: 1200px (desktop), 992px (tablet landscape),
+   768px (tablet portrait), 576px (mobile)
+   ============================================================= */
+
+/* ── Large Desktop & Tablet Landscape (max 1024px) ────────── */
+@media (max-width: 1024px) {
+  .hero-section .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-social-proof {
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .feature-split {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  .genie-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 36px;
+  }
+
+  .api-split {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Tablet & Mobile Navigation (max 900px) ───────────────── */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-search-btn kbd {
+    display: none;
+  }
+}
+
+/* ── Mobile Devices (max 768px) ───────────────────────────── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 20px);
+    padding-bottom: 50px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .app-preview-body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .preview-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .preview-canvas {
+    height: 300px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    justify-content: center;
+  }
+
+  .float-badge {
+    display: none;
+  }
+}
+
+/* ── Small Mobile (max 480px) ─────────────────────────────── */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta-card {
+    padding: 50px 20px;
+  }
+
+  .final-cta-actions {
+    flex-direction: column;
+  }
+
+  .final-cta-actions .btn {
+    width: 100%;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
